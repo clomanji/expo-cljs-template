@@ -1,17 +1,16 @@
 (set-env!
- :source-paths   #{"src" "env/dev"}
+ :source-paths   #{"src"}
  :dependencies '[[ajchemist/boot-figwheel "0.5.4-6" :scope "test"]
                  [org.clojure/tools.nrepl "0.2.12" :scope "test"]
                  [com.cemerick/piggieback "0.2.1" :scope "test"]
                  [figwheel-sidecar "0.5.10" :scope "test"]
-                 [react-native-externs "0.0.2-SNAPSHOT" :scope "test"]
+                 [react-native-externs "0.1.0" :scope "test"]
 
                  [org.clojure/clojure "1.9.0-alpha16"]
                  [org.clojure/clojurescript "1.9.542"]
                  [org.clojure/core.async "0.3.442"]
                  [reagent "0.7.0" :exclusions [cljsjs/react cljsjs/react-dom cljsjs/react-dom-server]]
-                 [re-frame "0.9.3"]
-                 [react-native-externs "0.1.0"]])
+                 [re-frame "0.9.3"]])
 
 (require
  '[boot-figwheel]
@@ -42,6 +41,7 @@
 (deftask dev
   "boot dev, then input (fw-cljs-repl)"
   []
+  (set-env! :source-paths #(conj % "env/dev"))
   (user/prepare)
   (comp
    (figwheel)

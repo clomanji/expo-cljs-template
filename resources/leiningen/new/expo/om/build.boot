@@ -4,7 +4,7 @@
                  [org.clojure/tools.nrepl "0.2.12" :scope "test"]
                  [com.cemerick/piggieback "0.2.1" :scope "test"]
                  [figwheel-sidecar "0.5.4.10" :scope "test"]
-                 [react-native-externs "0.0.2-SNAPSHOT" :scope "test"]
+                 [react-native-externs "0.1.0" :scope "test"]
 
                  [org.clojure/clojure "1.9.0-alpha16"]
                  [org.clojure/clojurescript      "1.9.542"]

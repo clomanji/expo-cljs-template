@@ -34,7 +34,7 @@
 ``` shell
     boot dev
 
-    ;; then input (cljs-repl) in the connected clojure repl to connect to boot cljs repl
+    ;; then input (fw-cljs-repl) in the connected clojure repl to connect to boot cljs repl
 ```
 
 #### Start Exponent server (Using `exp`)
@@ -72,5 +72,6 @@ lein prod-build
 
 #### boot users
 ``` shell
+rm -rf target
 boot prod
 ```
